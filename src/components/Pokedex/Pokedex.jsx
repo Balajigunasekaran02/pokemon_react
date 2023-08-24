@@ -1,6 +1,6 @@
 import "./Pokedex.css";
 import Search from "../Search/Search.jsx";
-import PokemonList from "../PokemonList/PokemonList";
+import PokemonList from "../PokemonList/PokemonList.jsx";
 function Pokedex() {
   return (
     <div className="pokedex-wrapper">

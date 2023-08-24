@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./PokemonList.css";
-import Pokemon from "../Pokemon/Pokemon";
+import Pokemon from "../Pokemon/Pokemon.jsx";
 function PokemonList() {
   const DEFAULT_URL = "https://pokeapi.co/api/v2/pokemon";
   const [pokemonList, setPokemonList] = useState([]);
@@ -45,6 +45,7 @@ function PokemonList() {
           <Pokemon
             name={pokemon.name}
             key={pokemon.id}
+            id={pokemon.id}
             imageUrl={pokemon.image}
             types={pokemon.types}
             ability={pokemon.abilities}
