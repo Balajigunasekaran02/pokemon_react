@@ -2,10 +2,12 @@ import "./PokemonDetails.css";
 import { Link, useParams } from "react-router-dom";
 //Custom hook
 import usePokemon from "../../hooks/usePokemon";
+import Pokemon from "../Pokemon/Pokemon";
 
 function PokemonDetails() {
   const { id } = useParams();
-  const [pokemon] = usePokemon(id);
+  const [pokemon, pokemonStateList] = usePokemon(id);
+
   return (
     pokemon && (
       <>
@@ -28,6 +30,22 @@ function PokemonDetails() {
                 {t.type.name}
               </span>
             ))}
+          </div>
+        </div>
+        <div className="similar-pokemons">
+          <h2 className="similar-title">Similar Pokemons</h2>
+          <div className="related-pokemons">
+            {pokemonStateList.pokemonList.length > 0 &&
+              pokemonStateList.pokemonList.map((pokemon) => (
+                <Pokemon
+                  name={pokemon.name}
+                  key={pokemon.id}
+                  id={pokemon.id}
+                  imageUrl={pokemon.image}
+                  types={pokemon.types}
+                  ability={pokemon.abilities}
+                />
+              ))}
           </div>
         </div>
       </>

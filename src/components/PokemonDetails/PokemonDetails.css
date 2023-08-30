@@ -36,3 +36,36 @@
   font-size: x-large;
   font-weight: bold;
 }
+.similar-pokemons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+.similar-title {
+  font-size: xx-large;
+  letter-spacing: 2rem;
+}
+.related-pokemons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  letter-spacing: 10px;
+  margin-bottom: 3rem;
+}
+/* .show-more {
+  display: flex;
+  justify-content: center;
+}
+
+.show-more button {
+  padding: 10px 2rem;
+  margin-left: 1rem;
+  font-weight: bold;
+  border: none;
+  background-color: salmon;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+} */
