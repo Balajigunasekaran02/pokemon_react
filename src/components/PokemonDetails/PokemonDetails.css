@@ -33,8 +33,9 @@
 .back-link {
   text-decoration: none;
   color: black;
-  font-size: x-large;
+  font-size: xx-large;
   font-weight: bold;
+  margin-top: 1rem;
 }
 .similar-pokemons {
   display: flex;
